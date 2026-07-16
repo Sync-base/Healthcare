@@ -76,7 +76,8 @@
       z-index: 10;
     }
   /* 1. Header Title dengan drop-shadow warna tema */
-  .header-title {
+/* 1. Header Title: Diberi background agar shadow terlihat */
+    .header-title {
       font-weight: 600;
       padding: 4px 12px;
       border-radius: 12px;
@@ -84,18 +85,32 @@
       align-items: center;
       gap: 6px;
       border: 1px solid rgba(6, 78, 59, 0.2);
-      /* Memberikan efek shadow halus dengan nuansa warna tema (hijau gelap) */
-      filter: drop-shadow(0 1px 2px rgba(6, 78, 59, 0.2));
-  }
+      background-color: #ffffff; /* Wajib ada agar shadow terlihat */
+      box-shadow: 0 2px 4px rgba(6, 78, 59, 0.1); /* Bayangan hijau halus */
+    }
 
-  /* 2. Status Dot agar terlihat seperti pada gambar */
-  .status-dot {
+    /* 2. System Status & Dot: Memastikan tata letak sejajar */
+    .system-status {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #064E3B;
+      padding: 4px 12px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center; /* Menjaga titik dot sejajar dengan teks */
+      gap: 8px; /* Jarak antara dot dan teks */
+      border: 1px solid rgba(6, 78, 59, 0.2);
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(6, 78, 59, 0.1);
+    }
+    
+    .status-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background-color: #064E3B; /* Warna hijau solid sesuai tema */
-      box-shadow: 0 0 4px rgba(6, 78, 59, 0.6); /* Efek cahaya pada dot */
-  }    
+      background-color: #064E3B; /* Hijau solid */
+      display: inline-block;
+    }   
     .spinner {
       width: 35px;
       height: 35px;
